@@ -1,0 +1,157 @@
+html, body {
+    line-height: 1.8;
+    font-family: "Microsoft YaHei";
+}
+
+* {
+    box-sizing: border-box;
+}
+.border-box{box-sizing: border-box;}
+.text-center {
+    text-align: center
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.link {
+    color: cornflowerblue
+}
+
+.text-muted {
+    color: #999;
+}
+
+.note {
+    font-size: 90%;
+    @extend .text-muted;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.image-fill {
+    width: 100%;
+}
+
+.cost {
+    font-size: 120%
+}
+
+.cost-original {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 90%
+}
+.abs-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scroll-y {
+    overflow-y: auto;
+}
+.scroll-x {
+    overflow-x: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.flex{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.row {
+    @extend .flex;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.column {
+    @extend .row;
+    flex-direction: column;
+}
+.column-reverse {flex-direction:column-reverse}
+.column-bottom{
+    align-items:flex-end; //（下对齐）
+}
+.column-top{
+    align-items:flex-start; //（上对齐）
+}
+.list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.list-column {
+    @extend .list ;
+    flex-direction: column;
+}
+
+.fit {
+    flex: 1;
+}
+
+.fill{
+    flex-grow: 1;
+}
+
+.row-center{
+    @extend .flex;
+    justify-content: center; // 横向居中
+}
+.row-reverse{flex-direction:row-reverse};
+.row-right{ justify-content:flex-end; }
+.row-left{ justify-content:flex-start ; }
+.column-center{
+    @extend .flex;
+    align-content: center;
+}
+.center{
+    @extend .row-center;
+    @extend .column-center;
+}
+.outer-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.abs-center{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.fixed-center{
+    @extend .abs-center;
+    position: fixed;
+}
+
+.between { @extend .flex;justify-content:space-between;  }//（两端对齐）
+.around{ @extend .flex; justify-content:space-around; }//（两端间距对其）
+
+.article {
+    line-height: 2.1;
+}
+
+

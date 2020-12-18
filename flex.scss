@@ -1,0 +1,82 @@
+/* flex 布局库 */
+.border-box{box-sizing: border-box;}
+
+.flex {
+  display: flex;
+  box-sizing: border-box;
+  //flex-direction: row;
+  flex-flow: row nowrap;
+  * {  box-sizing: border-box; }
+}
+
+.flex-item{
+  flex: 1;
+}
+
+.flex-column {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.flex-list{
+  @extend .flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap{
+  flex-wrap:nowrap; // 超出不换行，很奇怪里面的宽度会变成100%
+}
+
+// 横向居中
+.flex-center{
+  justify-content: center; // 横向居中
+}
+
+.flex-reverse{flex-direction:row-reverse}
+.flex-right{ justify-content:flex-end; }
+.flex-left{ justify-content:flex-start ; }
+// 左右两侧布局
+.flex-between { justify-content:space-between;  }//（两端对齐）
+.flex-around{justify-content:space-around; }//（两端间距对其）
+
+
+.flex-row {
+  flex-direction: row;
+  width: auto;
+}
+.flex-column-reverse{
+  flex-direction:column-reverse
+}
+
+.flex-middle{
+  align-items:center;//（垂直居中对齐）
+}
+/*侧轴方向对齐方式（作用于容器）*/
+.flex-bottom{
+  align-items:flex-end; //（下对齐）
+}
+.flex-top{
+  align-items:flex-start; //（上对齐）
+}
+
+// 上下居中
+.flex-center-all{
+  justify-content: center; // 横向居中
+  align-items:center;//（垂直居中对齐）
+}
+
+/*.flex-inline {
+  display: inline-flex !important;
+}*/
+// 自己动填充空白区间
+.flex-fill{
+  flex-grow: 1;
+}
+
+//为上面三个属性的缩写值合写形式，后两个参数即flex-shrink、flex-basis可以省略。一般都取为1
+/*.flex-grow{}
+.flex-shrink{}
+.flex-basis{}
+.align-self{}
+justify-items: center; //横向对齐模式
+*/

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+        }
+        .block{
+            background: #eee;
+            border: 1px solid #eee;
+        }
+        .header,.footer{
+            background: burlywood;
+            height: 100px;
+           /* flex: 0 0 100px;*/
+        }
+        .container{
+            height:calc(100vh - 100px);
+           /* flex: 0 0 calc(100vh - 100px);*/
+            background: brown;
+        }
+        .side{
+            width: 100px;
+            background: azure;
+        }
+        .main{
+            flex-grow: 1;
+            background: aqua;
+        }
+        .block-list .block{
+            width: 50px;
+            height: 200px;
+            background: black;
+        }
+        .menu .block{
+            height: 50px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="flex flex-column">
+    <header class="header flex flex-between">
+        <div class="block">Left</div>
+        <div class="block flex flex-middle">Center</div>
+        <div class="block">Center</div>
+        <div class="block">Right</div>
+    </header>
+    <div class="container flex ">
+        <div class="side border-box">
+            <div class="menu flex flex-column">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <div class="main border-box flex">
+            <div class="flex  block-list flex-top">
+                <div class="block" ></div>
+            </div>
+            <div class="flex  block-list flex-middle">
+                <div class="block " ></div>
+            </div>
+            <div class="flex  block-list flex-bottom">
+                <div class="block " ></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer flex flex-center-all">
+        Footer
+    </footer>
+
+</div>
+
+<!--<div class="container">
+    <div class="flex ">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+</div>
+<br>
+<div class="container" style="height: 700px;">
+    <div class="flex-vertical ">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+</div>-->
+
+</body>
+</html>
